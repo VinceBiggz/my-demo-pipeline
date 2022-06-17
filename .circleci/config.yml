@@ -7,6 +7,16 @@ jobs:
     steps:
       - checkout
       - run: npm i
+      - run: npm install --save-dev @babel/cli@7.17.1
+      - run: npm install --save-dev browser-sync@2.27.10
+      - run: npm install --save-dev babel-jest@28.1.1
+      - run: npm install --save-dev jest-cli@28.1.1
+      - run: npm install --save-dev jest@28.1.1
+      - run: npm install --save-dev node-sass@7.0.1
+      - run: npm install --save-dev ajv@8.11.0
+      - run: npm install --save-dev concurrently@7.2.2
+      - run: npm install --save-dev open-cli@7.0.1
+      - run: npm install --save-dev replace@1.2.1
       - run: npm run lint
   test:
     docker:
@@ -14,6 +24,16 @@ jobs:
     steps:
       - checkout
       - run: npm i
+        - run: npm install --save-dev @babel/cli@7.17.1
+      - run: npm install --save-dev browser-sync@2.27.10
+      - run: npm install --save-dev babel-jest@28.1.1
+      - run: npm install --save-dev jest-cli@28.1.1
+      - run: npm install --save-dev jest@28.1.1
+      - run: npm install --save-dev node-sass@7.0.1
+      - run: npm install --save-dev ajv@8.11.0
+      - run: npm install --save-dev concurrently@7.2.2
+      - run: npm install --save-dev open-cli@7.0.1
+      - run: npm install --save-dev replace@1.2.1
       - run: npm run test
   analyze:
     docker:
